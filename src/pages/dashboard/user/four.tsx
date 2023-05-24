@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
-import { Container, Typography } from '@mui/material';
+import { Box, Grid, Card, Container, TextField} from '@mui/material';
+
 // layouts
 import Layout from '../../../layouts';
 // hooks
@@ -17,30 +18,40 @@ PageFour.getLayout = function getLayout(page: ReactElement) {
 
 export default function PageFour() {
   const { themeStretch } = useSettings();
-
+  
   return (
-    <Page title="Page Four">
-      <Container maxWidth={themeStretch ? false : 'xl'}>
-        <Typography variant="h3" component="h1" paragraph>
-          Page Four
-        </Typography>
-        <Typography gutterBottom>
-          Curabitur turpis. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc,
-          vitae euismod ligula urna in dolor. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
-          id, lorem. Phasellus blandit leo ut odio. Vestibulum ante ipsum primis in faucibus orci
-          luctus et ultrices posuere cubilia Curae; Fusce id purus. Aliquam lorem ante, dapibus in,
-          viverra quis, feugiat a, tellus. In consectetuer turpis ut velit. Aenean posuere, tortor
-          sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.
-          Vestibulum suscipit nulla quis orci. Nam commodo suscipit quam. Sed a libero.
-        </Typography>
-        <Typography>
-          Praesent ac sem eget est egestas volutpat. Phasellus viverra nulla ut metus varius
-          laoreet. Curabitur ullamcorper ultricies nisi. Ut non enim eleifend felis pretium feugiat.
-          Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Fusce vel dui. Quisque
-          libero metus, condimentum nec, tempor a, commodo mollis, magna. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo. Cras dapibus.
-        </Typography>
-      </Container>
+  <Page title="Page 4">
+    <Container maxWidth={themeStretch ? false : 'xl'}>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={12}>
+          <Card sx={{ p: 3 }}>
+            <Box
+              sx={{
+                display: 'grid',
+                rowGap: 1,
+                columnGap: 1,
+                gridTemplateColumns: { md: 'repeat(3, 1fr)', xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' },
+              }}
+            >
+              <TextField name="displayName" label="Name" />
+              <TextField name="email" label="Email Address" />
+              <TextField name="displayName" label="Tipo de Identificacion" size="small" />
+              <TextField name="phoneNumber" label="Phone Number" />
+              <TextField name="address" label="Address" />
+
+
+
+              <TextField name="state" label="State/Region" />
+
+              <TextField name="city" label="City" />
+              <TextField name="zipCode" label="Zip/Code" />
+            </Box>
+
+ 
+          </Card>
+        </Grid>
+      </Grid>
+    </Container>
     </Page>
   );
 }
