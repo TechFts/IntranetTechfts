@@ -25,8 +25,8 @@ const navConfig = [
       path: '/dashboard/cliente', 
       icon: ICONS.dashboard,
       children: [
-        { title: 'Perfil', path: '/dashboard/cliente/perfil' },
-        { title: 'Consultar Cliente', path: '/dashboard/cliente/agregar' }, 
+        { title: 'Perfil', path: '/dashboard/cliente/' },
+        { title: 'Consultar Cliente', path: '/dashboard/cliente/consultar' }, 
         { title: 'Agregar Cliente', path: '/dashboard/cliente/agregar' },
       ],},
       

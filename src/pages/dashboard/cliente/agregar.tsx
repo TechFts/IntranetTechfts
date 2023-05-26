@@ -12,7 +12,7 @@ import Iconify from '../../../components/Iconify';
 // sections
 import AgregarProveedor from '../../../sections/@dashboard/cliente/agregar/agregarproveedor';
 import AgregarContactoComercial from '../../../sections/@dashboard/cliente/agregar/agregarcontactocomercial';
-
+import AgregarContactoTecnico from '../../../sections/@dashboard/cliente/agregar/agregarcontactotecnico';
 
 // ----------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ export default function UserAccount() {
     {
       value: 'Contacto tecnico',
       icon: <Iconify icon={'ic:round-account-box'} width={20} height={20} />,
-      component: <AgregarProveedor />,
+      component: <AgregarContactoTecnico />,
     },
     {
       value: 'contacto recaudador',

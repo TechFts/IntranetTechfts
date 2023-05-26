@@ -4,7 +4,7 @@ import { Box, Grid, Card, Container} from '@mui/material';
 // hooks
 import useSettings from '../../../../hooks/useSettings';
 import Layout from '../../../../layouts';
-import TablaDatosPersonalesClientes from './tabladatospersonalesclientes';
+import TablaDatosPersonales from './tabladatospersonales';
 
 // ----------------------------------------------------------------------
 
@@ -28,7 +28,7 @@ export default function PageDatosPersonalesCliente() {
                 gridTemplateColumns: { md: 'repeat(1, 1fr)', xs: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)' },
               }}
             > 
-                <TablaDatosPersonalesClientes/>
+                <TablaDatosPersonales/>
             </Box>
           </Card>
         </Grid>
