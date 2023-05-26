@@ -34,7 +34,7 @@ export default function PageTelefonoEmail() {
                 display: 'grid',
                 rowGap: 1,
                 columnGap: 1,
-                gridTemplateColumns: { md: 'repeat(2, 1fr)', xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' },
+                gridTemplateColumns: { md: 'repeat(1, 1fr)', xs: 'repeat(1, 1fr)', sm: 'repeat(1, 1fr)' },
               }}
             > 
               <TablaDireccion/>

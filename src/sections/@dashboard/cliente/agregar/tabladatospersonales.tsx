@@ -104,27 +104,15 @@ export default function FullFeaturedCrudGrid() {
   };
 
   const columns: GridColDef[] = [
-    { field: 'name', headerName: '1er Nombre',  width: 120,  editable: true },
-    { field: 'name2', headerName: '2do Nombre', width: 120,  editable: true },
-    { field: 'apellido', headerName: '1er Apellido', width: 120, editable: true },
-    { field: 'apellido2', headerName: '2do Apellido', width: 120,  editable: true },
+    { field: 'name', headerName: 'Primer Nombre',  width: 120,  editable: true },
+    { field: 'name2', headerName: 'Segundo Nombre', width: 120,  editable: true },
+    { field: 'apellido', headerName: 'Primer Apellido', width: 120, editable: true },
+    { field: 'apellido2', headerName: 'Segundo Apellido', width: 120,  editable: true },
     { field: 'numero', headerName: 'Telefono', width: 120, type: 'number',  editable: true },
     { field: 'email', headerName: 'Email', width: 120, editable: true },
   ];
 
   return (
-    <Box
-      sx={{
-        height: 300,
-        width: '100%',
-        '& .actions': {
-          color: 'text.secondary',
-        },
-        '& .textPrimary': {
-          color: 'text.primary',
-        },
-      }}
-    >
       <DataGridPro
         rows={rows}
         density="compact"
@@ -142,6 +130,5 @@ export default function FullFeaturedCrudGrid() {
           toolbar: { setRows, setRowModesModel },
         }}
       />
-    </Box>
   );
 }
